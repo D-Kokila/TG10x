@@ -1,11 +1,7 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pages/Loginpage';
 import { StartupZonePage } from '../pages/StartupzonePage';
 
 test('Post Job Opportunity', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  await loginPage.navigate();
-  await loginPage.login('testuid25@gmail.com', 'Test@123');
 
   const postJobPage = new StartupZonePage(page);
   await page.goto('https://tg10x.com/login');
